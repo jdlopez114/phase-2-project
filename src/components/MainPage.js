@@ -1,3 +1,4 @@
+import { Container, Grid } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import PageCollection from "./PageCollection";
 
@@ -17,9 +18,7 @@ function MainPage(){
         
 
     return (
-        <div>
-            <PageCollection allData={ allData }/>
-        </div>
+        <PageCollection allData={ allData }/>
     )
 }
 

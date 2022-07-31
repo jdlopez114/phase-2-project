@@ -1,20 +1,19 @@
 import React from "react";
 import PageCard from "./PageCard"
+import { Grid } from "@material-ui/core";
 
 
 function PageCollection({ allData }){
 
-    const dataCards = allData.map(data => {
-        return <PageCard
-                key={ data.id } 
-                data={ data }
-                />
-    })
-
     return (
-        <div>
-        { dataCards }
-        </div>
+        <Grid container spacing={2}>
+            {allData.map(data => {
+               return <Grid item key={data.id} xs={12} md={6} lg={4}>
+                         <PageCard data={data}/>
+                     </Grid>
+            })}
+            
+        </Grid>
     );
 }
 

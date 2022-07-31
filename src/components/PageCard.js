@@ -6,12 +6,10 @@ import { Typography, CardMedia } from "@material-ui/core";
 
 
 function PageCard({ data }) {
-    console.log(data.image)
-
-    // const { image } = data;
+ 
 
     return (
-        <Card elevation={2}>
+        <Card elevation={2} sx={{ maxWidth: 345 }}>
             <CardHeader
                 title={data.name}
                 subheader={data.species}

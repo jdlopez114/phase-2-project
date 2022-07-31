@@ -8,7 +8,7 @@ function PageCollection({ allData }){
     return (
         <Grid container spacing={2}>
             {allData.map(data => {
-               return <Grid item key={data.id} xs={12} md={6} lg={4}>
+               return <Grid item key={data.id} xs={8} md={4} lg={2}>
                          <PageCard data={data}/>
                      </Grid>
             })}

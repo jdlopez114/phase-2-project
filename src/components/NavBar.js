@@ -1,17 +1,26 @@
-// import React from "react";
-// import { NavLink } from "react-router-dom";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-// function NavBar() {
+function NavBar() {
 
-//     const NavBar = 
-//     <div className='navbar'>
-//       <NavLink exact to="/"> Home </NavLink>
-//       <NavLink exact to="/movies"> Movies </NavLink>
-//       <NavLink exact to="/directors"> Directors </NavLink>
-//       <NavLink exact to="/actors"> Create-A-Rick </NavLink>
-//     </div>
+    const linkStyles = {
+        width: "100px",
+        padding: "12px",
+        margin: "0 6px 6px",
+        background: "blue",
+        textDecoration: "none",
+        color: "white",
+      };
+
+    const NavBar = 
+    <div className='navbar'>
+      <NavLink exact to="/" style={linkStyles}> Home Page </NavLink>
+      <NavLink exact to="/human" style={linkStyles}> Human </NavLink>
+      <NavLink exact to="/alien" style={linkStyles}> Alien </NavLink>
+      <NavLink exact to="/collection" style={linkStyles}> Collection </NavLink>
+    </div>
   
-//     return <div>{NavBar}</div>;
-//   }
+    return <div>{NavBar}</div>;
+  }
   
-//   export default NavBar;
+  export default NavBar;

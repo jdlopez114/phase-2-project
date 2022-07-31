@@ -1,14 +1,21 @@
 import React from "react";
 import MainPage from "./MainPage";
+import { Routes ,Route } from 'react-router-dom';
 import NavBar from "./NavBar"
-// import { Route, Switch } from "react-router-dom";
 
 
 function App() {
+
+
+
   return (
     <div className="app">
-      {/* <NavBar /> */}
-      <MainPage />
+       <br />
+      <NavBar />
+      <br />
+      <Routes>
+          <Route path="/" element={<MainPage />}/>
+      </Routes>
       
     </div>
   );

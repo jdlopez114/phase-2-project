@@ -1,12 +1,13 @@
 import { Container, Grid } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
+import Search from "./Search"
 import PageCollection from "./PageCollection";
-
 
 
 function MainPage(){
 
     const [ allData, setAllData ] = useState([])
+    const [ filteredData, setFilteredData] = useState([])
 
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/`)
@@ -15,10 +16,26 @@ function MainPage(){
             setAllData(data.results))
     }, [])
 
-        
+    useEffect(() => {
+        setFilteredData(allData)
+    }, [allData])
+
+    function handleSearch(e) {
+        const filData = allData.filter(dat => {
+            return dat.name.toLowerCase().includes(e.target.value)
+        })
+        setFilteredData(filData)
+      }
+
 
     return (
-        <PageCollection allData={ allData }/>
+        <Container>
+            <br />
+            <Search handleSearch={handleSearch}/>
+            <br />
+            <PageCollection allData={ filteredData }/>
+          
+        </Container>
     )
 }
 

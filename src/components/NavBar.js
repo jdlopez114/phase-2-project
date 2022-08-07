@@ -17,7 +17,7 @@ function NavBar() {
       <NavLink exact to="/" style={linkStyles}> Home Page </NavLink>
       <NavLink exact to="/human" style={linkStyles}> Human </NavLink>
       <NavLink exact to="/alien" style={linkStyles}> Alien </NavLink>
-      <NavLink exact to="/form" style={linkStyles}> Form </NavLink>
+      <NavLink exact to="/form" style={linkStyles}> Custom </NavLink>
     </div>
   
     return <div>{NavBar}</div>;

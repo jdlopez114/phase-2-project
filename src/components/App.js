@@ -4,6 +4,7 @@ import { Routes ,Route } from 'react-router-dom';
 import NavBar from "./NavBar"
 import HumanPage from "./HumanPage";
 import AlienPage from "./AlienPage";
+import Form from "./Form";
 
 
 function App() {
@@ -34,10 +35,14 @@ function App() {
       <br />
         <NavBar />
         <br />
+          
+        <br />
+      <br />
         <Routes>
           <Route path="/" element={<MainPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
           <Route path="/Human" element={<HumanPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
           <Route path="/Alien" element={<AlienPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
+          <Route path="/Form" element={<Form filteredData={ filteredData } handleSearch={ handleSearch } />}/>
         </Routes>
     </div>
   );

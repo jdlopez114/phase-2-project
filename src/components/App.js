@@ -12,11 +12,25 @@ function App() {
   const [ allData, setAllData ] = useState([])
   const [ filteredData, setFilteredData] = useState([])
 
+  function addNewCharacter(newCharacter){
+    fetch(`http://localhost:3001/results`, {
+      method: "POST",
+      headers: { 
+        "Content-Type" : "application/json"
+      }, 
+        body: JSON.stringify(newCharacter)
+    })
+        .then(r => r.json())
+        .then(data => console.log(data))
+    setAllData([...allData, newCharacter])
+  }
+
   useEffect(() => {
-      fetch(`https://rickandmortyapi.com/api/character/`)
+      fetch(`http://localhost:3001/results`)
       .then(r => r.json())
       .then(data => 
-          setAllData(data.results))
+          setAllData(data))
+          // console.log(data))
   }, [])
 
   useEffect(() => {
@@ -42,7 +56,7 @@ function App() {
           <Route path="/" element={<MainPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
           <Route path="/Human" element={<HumanPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
           <Route path="/Alien" element={<AlienPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
-          <Route path="/Form" element={<Form filteredData={ filteredData } handleSearch={ handleSearch } />}/>
+          <Route path="/Form" element={<Form filteredData={ filteredData } handleSearch={ handleSearch } addNewCharacter={ addNewCharacter }/>}/>
         </Routes>
     </div>
   );

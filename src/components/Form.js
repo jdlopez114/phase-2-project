@@ -14,15 +14,16 @@ const useStyles = makeStyles({
     }
 })
 
-function Form({  }) {
+function Form({ addNewCharacter }) {
 
-// const [formData, setFormData] = useState(
-//     {
-//         "id": "",
-//         "name": "",
-//         "image": ""
-//     }
-// )
+const [formData, setFormData] = useState(
+    {
+        "name": "",
+        "species": "",
+        "image": "",
+        "status": ""
+    }
+)
 
 //     return ( 
 //         <section id="form">
@@ -47,26 +48,15 @@ function Form({  }) {
 
 const classes = useStyles()
 
-const [title, setTitle] = useState(" ")
-const [details, setDetails] = useState(" ")
-const [titleError, setTitleError] = useState(false)
-const [detailsError, setDetailsError] = useState(false)
-
 function handleSubmit(e){
     e.preventDefault()
-    setTitleError(false)
-    setDetailsError(false)
+    addNewCharacter(formData)
+}
 
-    if(title == ''){
-        setTitleError(true)
-    }
-    if(details == ''){
-        setDetailsError(true)
-    }
-
-    if (title && details){
-        console.log(title, details)
-    }
+function handleChange(e){
+    setFormData({
+        ...formData, [e.target.name] : e.target.value
+    })
 }
 
 return (
@@ -77,42 +67,59 @@ return (
             component="h2"
             gutterBottom
         >
-            Create a new note
+            Welcome to the Rick and Morty Multiverse
         </Typography>
 
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>
             <TextField 
-                onChange={(e) => setTitle(e.target.value)}
+                onChange={handleChange}
                 className={classes.field}
-                label="Note Title"
+                label="Name"
                 variant="outlined"
                 fullWidth
                 required
-                error={titleError}
+                value={formData.name}
+                name="name"
             />
             <TextField 
-                onChange={(e) => setDetails(e.target.value)}
+                onChange={handleChange}
                 className={classes.field}
-                label="Details"
+                label="Species"
+                variant="outlined"
+                fullWidth
+                required  
+                value={formData.species}
+                name="species"
+            />  
+            <TextField 
+                onChange={handleChange}
+                className={classes.field}
+                label="Image URL"
                 variant="outlined"
                 fullWidth
                 required
-                multiline
-                rows={4}
-                error={detailsError}
-            />   
+                value={formData.image}
+                name="image"
+            />
+            <TextField 
+                onChange={handleChange}
+                className={classes.field}
+                label="Status"
+                variant="outlined"
+                fullWidth
+                required
+                value={formData.status}
+                name="status"
+            /> 
             <Button
-            type="submit"
-            color="secondary"
-            variant="contained"
-            endIcon={<KeyboardArrowRightIcon/>}
+                type="submit"
+                color="secondary"
+                variant="contained"
+                endIcon={<KeyboardArrowRightIcon/>}
             >
             Submit
             </Button>       
-
-        </form>
-
-        
+        </form> 
     </Container>
     )
 }

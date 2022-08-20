@@ -2,7 +2,6 @@ import { Container } from "@material-ui/core";
 import Search from "./Search"
 import PageCollection from "./PageCollection";
 
-
 function AlienPage({ filteredData, handleSearch }) {
 
     const alienData = filteredData.filter(hum =>  hum.species === 'Alien')

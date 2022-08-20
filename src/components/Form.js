@@ -25,27 +25,6 @@ const [formData, setFormData] = useState(
     }
 )
 
-//     return ( 
-//         <section id="form">
-//             <h3>Who else is out there in the Universe</h3>
-//                 <form >
-//                     <label htmlFor="name">Name:</label>
-//                     <input type="text" />
-                    
-//                     <label htmlFor="about">Upload a picture!</label>
-//                     <input type="text" />
-                    
-//                     <select id="cars" name="cars">
-//                         <option value="Human">Human</option>
-//                         <option value="Alien">Alien</option>
-
-//                     </select>
-                    
-//                     <button type="submit">Submit</button>
-//                 </form>
-//         </section>
-//     )
-
 const classes = useStyles()
 
 function handleSubmit(e){

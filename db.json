@@ -1576,10 +1576,10 @@
       "created": "2017-11-05T11:52:45.852Z"
     },
     {
-      "name": "Bart Simpson",
-      "species": "Human",
-      "image": "https://en.wikipedia.org/wiki/Bart_Simpson#/media/File:Bart_Simpson_200px.png",
-      "status": "Alive",
+      "name": "",
+      "species": "",
+      "image": "",
+      "status": "",
       "id": 61
     }
   ]

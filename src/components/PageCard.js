@@ -4,10 +4,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import { Typography, CardMedia } from "@material-ui/core";
 
-
 function PageCard({ data }) {
  
-
     return (
         <Card elevation={2} sx={{ maxWidth: 345 }}>
             <CardHeader

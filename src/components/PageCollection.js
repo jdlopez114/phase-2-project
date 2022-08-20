@@ -2,7 +2,6 @@ import React from "react";
 import PageCard from "./PageCard"
 import { Grid } from "@material-ui/core";
 
-
 function PageCollection({ allData }){
 
     return (

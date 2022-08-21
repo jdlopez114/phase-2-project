@@ -1576,10 +1576,10 @@
       "created": "2017-11-05T11:52:45.852Z"
     },
     {
-      "name": "",
-      "species": "",
-      "image": "",
-      "status": "",
+      "name": "Test",
+      "species": "Human",
+      "image": "https://rickandmortyapi.com/api/character/avatar/58.jpeg",
+      "status": "Alive",
       "id": 61
     }
   ]

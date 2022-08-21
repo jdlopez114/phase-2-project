@@ -5,12 +5,13 @@ import NavBar from "./NavBar"
 import HumanPage from "./HumanPage";
 import AlienPage from "./AlienPage";
 import Form from "./Form";
-import CharacterSubmission from "./CharacterSubmisison";
+import CharacterSubmission from "./Submisison";
 
 function App() {
 
   const [ allData, setAllData ] = useState([])
   const [ filteredData, setFilteredData] = useState([])
+  const [ submittedCharacter, setSubmittedCharacter ] = useState([])
 
   const navigate = useNavigate();
 
@@ -27,6 +28,7 @@ function App() {
           // redirect to character submitted page
           navigate(`/Submission`))
           // console.log(data))
+    setSubmittedCharacter(newCharacter)
     setAllData([...allData, newCharacter])
   }
 
@@ -62,7 +64,7 @@ function App() {
           <Route path="/human" element={<HumanPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
           <Route path="/alien" element={<AlienPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
           <Route path="/form" element={<Form filteredData={ filteredData } handleSearch={ handleSearch } addNewCharacter={ addNewCharacter }/>}/>
-          <Route path="/submission" element={<CharacterSubmission/>}/>
+          <Route path="/submission" element={<CharacterSubmission submittedCharacter={submittedCharacter}/>}/>
         </Routes>
     </div>
   );

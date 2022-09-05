@@ -6,8 +6,6 @@ import { Typography, CardMedia } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 
 function Submission({ submittedCharacter }){
-
-    console.log(submittedCharacter)
     
     return (
         <div> 

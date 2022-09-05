@@ -19,4 +19,4 @@ function AlienPage({ filteredData, handleSearch }) {
     )
 }
 
-export default AlienPage
+export default AlienPage;

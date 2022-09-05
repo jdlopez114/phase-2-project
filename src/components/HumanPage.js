@@ -19,4 +19,4 @@ function HumanPage({ filteredData, handleSearch }) {
     )
 }
 
-export default HumanPage
+export default HumanPage;

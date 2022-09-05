@@ -28,7 +28,6 @@ function App() {
         .then(data => 
           // redirect to character submitted page
           navigate(`/Submission`))
-          // console.log(data))
     setSubmittedCharacter(newCharacter)
     setAllData([...allData, newCharacter])
   }
@@ -38,7 +37,6 @@ function App() {
       .then(r => r.json())
       .then(data => 
           setAllData(data))
-          // console.log(data))
   }, [])
 
   useEffect(() => {

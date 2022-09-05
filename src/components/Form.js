@@ -46,7 +46,7 @@ return (
             component="h2"
             gutterBottom
         >
-            Welcome to the Rick and Morty Multiverse
+            Add to to the Universe! 
         </Typography>
 
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>

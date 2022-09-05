@@ -6,6 +6,7 @@ import HumanPage from "./HumanPage";
 import AlienPage from "./AlienPage";
 import Form from "./Form";
 import CharacterSubmission from "./Submisison";
+import { Typography } from "@material-ui/core";
 
 function App() {
 
@@ -54,9 +55,17 @@ function App() {
   return (
     <div className="app">
       <br />
-        <NavBar />
+      <Typography
+            variant="h3"
+            color="textSecondary"
+            component="h2"
+            gutterBottom
+            align="center"
+        >
+            Welcome to the Rick and Morty Multiverse! 
+        </Typography>
         <br />
-          
+        <NavBar />
         <br />
       <br />
         <Routes>

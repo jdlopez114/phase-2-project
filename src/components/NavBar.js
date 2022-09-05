@@ -10,6 +10,8 @@ function NavBar() {
       ? {
           color: '#fff',
           background: '#ff3c78',
+          borderRadius: '22px',
+          padding: '10px',
         }
       : { color: '#a0a0a0' }
   }> Home Page </NavLink>
@@ -18,6 +20,8 @@ function NavBar() {
       ? {
           color: '#fff',
           background: '#ff3c78',
+          borderRadius: '22px',
+          padding: '10px',
         }
       : { color: '#a0a0a0' }
   }> Human </NavLink>
@@ -26,6 +30,8 @@ function NavBar() {
       ? {
           color: '#fff',
           background: '#ff3c78',
+          borderRadius: '22px',
+          padding: '10px',
         }
       : { color: '#a0a0a0' }
   }> Alien </NavLink>
@@ -34,6 +40,8 @@ function NavBar() {
       ? {
           color: '#fff',
           background: '#ff3c78',
+          borderRadius: '22px',
+          padding: '10px',
         }
       : { color: '#a0a0a0' }
   }> Custom </NavLink>

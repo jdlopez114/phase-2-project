@@ -40,13 +40,14 @@ function handleChange(e){
 
 return (
     <Container>
+        <br />
         <Typography
             variant="h6"
             color="textSecondary"
             component="h2"
             gutterBottom
         >
-            Add to to the Universe! 
+            Add to the Universe! 
         </Typography>
         <br />
         <form noValidate autoComplete="off" onSubmit={handleSubmit}>

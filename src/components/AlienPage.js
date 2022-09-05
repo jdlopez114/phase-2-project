@@ -11,6 +11,9 @@ function AlienPage({ filteredData, handleSearch }) {
             <br />
                 <Search handleSearch={handleSearch}/>
             <br />
+            <br />
+            <br />
+            <br />
                 <PageCollection allData={ alienData }/>
         </Container>
     )

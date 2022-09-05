@@ -8,10 +8,13 @@ function HumanPage({ filteredData, handleSearch }) {
 
     return (
         <Container>
-        <br />
-            <Search handleSearch={handleSearch}/>
-        <br />
-            <PageCollection allData={ humanData }/>
+            <br />
+                <Search handleSearch={handleSearch}/>
+            <br />
+            <br />
+            <br />
+            <br />
+                <PageCollection allData={ humanData }/>
         </Container>
     )
 }

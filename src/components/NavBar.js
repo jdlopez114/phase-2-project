@@ -18,26 +18,8 @@ function NavBar() {
     <div className='navbar'>
       <NavLink exact="true" to="/" style={({ isActive }) => isActive ? selected: notSelected }> Home Page </NavLink>
       <NavLink exact="true" to="/human" style={({ isActive }) => isActive ? selected : notSelected}> Human </NavLink>
-      <NavLink exact="true" to="/alien" style={({ isActive }) =>
-    isActive
-      ? {
-          color: '#fff',
-          background: '#ff3c78',
-          borderRadius: '22px',
-          padding: '10px',
-        }
-      : { color: '#a0a0a0' }
-  }> Alien </NavLink>
-      <NavLink exact="true" to="/form" style={({ isActive }) =>
-    isActive
-      ? {
-          color: '#fff',
-          background: '#ff3c78',
-          borderRadius: '22px',
-          padding: '10px',
-        }
-      : { color: '#a0a0a0' }
-  }> Custom </NavLink>
+      <NavLink exact="true" to="/alien" style={({ isActive }) => isActive ? selected : notSelected}> Alien </NavLink>
+      <NavLink exact="true" to="/form" style={({ isActive }) => isActive ? selected : notSelected}> Custom </NavLink>
     </div>
   
     return <div>{NavBar}</div>;

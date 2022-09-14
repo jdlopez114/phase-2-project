@@ -28,6 +28,7 @@ function App() {
         .then(data => 
           // redirect to character submitted page
           navigate(`/Submission`))
+          .catch(error => (console.log(error)));
     setSubmittedCharacter(newCharacter)
     setAllData([...allData, newCharacter])
   }
@@ -36,7 +37,9 @@ function App() {
       fetch(`http://localhost:3001/results`)
       .then(r => r.json())
       .then(data => 
+            // console.log(data))
           setAllData(data))
+          .catch(error => (console.log(error)));
   }, [])
 
   useEffect(() => {

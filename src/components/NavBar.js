@@ -5,7 +5,7 @@ function NavBar() {
 
     const NavBar = 
     <div className='navbar'>
-      <NavLink exact to="/" style={({ isActive }) =>
+      <NavLink exact="true" to="/" style={({ isActive }) =>
     isActive
       ? {
           color: '#fff',
@@ -15,7 +15,7 @@ function NavBar() {
         }
       : { color: '#a0a0a0' }
   }> Home Page </NavLink>
-      <NavLink exact to="/human" style={({ isActive }) =>
+      <NavLink exact="true" to="/human" style={({ isActive }) =>
     isActive
       ? {
           color: '#fff',
@@ -25,7 +25,7 @@ function NavBar() {
         }
       : { color: '#a0a0a0' }
   }> Human </NavLink>
-      <NavLink exact to="/alien" style={({ isActive }) =>
+      <NavLink exact="true" to="/alien" style={({ isActive }) =>
     isActive
       ? {
           color: '#fff',
@@ -35,7 +35,7 @@ function NavBar() {
         }
       : { color: '#a0a0a0' }
   }> Alien </NavLink>
-      <NavLink exact to="/form" style={({ isActive }) =>
+      <NavLink exact="true" to="/form" style={({ isActive }) =>
     isActive
       ? {
           color: '#fff',

@@ -1574,6 +1574,13 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/60",
       "created": "2017-11-05T11:52:45.852Z"
+    },
+    {
+      "name": "Test",
+      "species": "Human",
+      "image": "",
+      "status": "Dead",
+      "id": 61
     }
   ]
 }

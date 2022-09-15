@@ -15,6 +15,7 @@ function PageCard({ data }) {
             <CardMedia
                 style = {{ height: '100%', width: '100%', paddingTop: '100%'}}
                 image={data.image}
+                component='div'
             />
             <CardContent>
                 <Typography>

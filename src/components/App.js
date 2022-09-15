@@ -16,6 +16,19 @@ function App() {
 
   const navigate = useNavigate();
 
+  useEffect(() => {
+    fetch(`http://localhost:3001/results`)
+    .then(r => r.json())
+    .then(data => 
+          // console.log(data))
+        setAllData(data))
+        .catch(error => (console.log(error)));
+  }, [])
+
+  useEffect(() => {
+      setFilteredData(allData)
+  }, [allData])
+
   function addNewCharacter(newCharacter){
     fetch(`http://localhost:3001/results`, {
       method: "POST",
@@ -32,19 +45,6 @@ function App() {
     setSubmittedCharacter(newCharacter)
     setAllData([...allData, newCharacter])
   }
-
-  useEffect(() => {
-      fetch(`http://localhost:3001/results`)
-      .then(r => r.json())
-      .then(data => 
-            // console.log(data))
-          setAllData(data))
-          .catch(error => (console.log(error)));
-  }, [])
-
-  useEffect(() => {
-      setFilteredData(allData)
-  }, [allData])
 
   function handleSearch(e) {
       const filData = allData.filter(dat => {

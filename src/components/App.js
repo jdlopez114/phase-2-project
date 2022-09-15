@@ -16,14 +16,14 @@ function App() {
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch(`http://localhost:3001/results`)
-    .then(r => r.json())
-    .then(data => 
-          // console.log(data))
-        setAllData(data))
-        .catch(error => (console.log(error)));
-  }, [])
+    useEffect(() => {
+      fetch(`http://localhost:3001/results`)
+      .then(r => r.json())
+      .then(data => 
+            // console.log(data))
+          setAllData(data))
+          .catch(error => (console.log(error)));
+    }, [])
 
   useEffect(() => {
       setFilteredData(allData)

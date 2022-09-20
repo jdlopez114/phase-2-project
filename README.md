@@ -12,6 +12,8 @@ Features
 
 The purpose of this project, is to have a database of the most obscure characters the universe has to offer. 
 
+How to Use
+
 ### Requirements 
 * Functional Web Browser
 

@@ -20,3 +20,4 @@ function AlienPage({ filteredData, handleSearch }) {
 }
 
 export default AlienPage;
+

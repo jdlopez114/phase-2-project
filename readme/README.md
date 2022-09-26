@@ -14,6 +14,13 @@ The purpose of this project, is to have a database of the most obscure character
 
 How to Use
 
+![Filter](readme/Filter.png)
+
+![Search](readme/Search.png)
+
+![Form](readme/Form.png)
+
+![Submission](readme/Submission.png)
 
 
 ### Requirements 

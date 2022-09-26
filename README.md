@@ -15,7 +15,7 @@ Features and How to Use
 * Filter through Human charcaters and Alien characters
 ![Filter](images/Filter.png)
 
-* Add a character with their own attributes
+* Add a character with their own custom attributes
 ![Form](images/Form.png)
 
 * Character Added!

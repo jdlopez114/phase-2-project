@@ -14,7 +14,7 @@ The purpose of this project, is to have a database of the most obscure character
 
 How to Use
 
-![Filter](readme/Filter.png)
+![Filter](/Users/jello/Development/code/phase-2/phase-2-project/readme/Filter.png)
 
 ![Search](readme/Search.png)
 

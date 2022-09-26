@@ -14,13 +14,13 @@ The purpose of this project, is to have a database of the most obscure character
 
 How to Use
 
-![Filter](/Users/jello/Development/code/phase-2/phase-2-project/readme/Filter.png)
+![Filter](images/Filter.png)
 
-![Search](readme/Search.png)
+![Search](images/Search.png)
 
-![Form](readme/Form.png)
+![Form](images/Form.png)
 
-![Submission](readme/Submission.png)
+![Submission](images/Submission.png)
 
 
 ### Requirements 

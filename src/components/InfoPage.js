@@ -1,10 +1,9 @@
 import { Container } from "@material-ui/core";
-import Search from "./Search"
 import PageCollection from "./PageCollection";
+import Search from "./Search";
+import React, { useState } from "react";
 
-function AlienPage({ filteredData, handleSearch }) {
-
-    const alienData = filteredData.filter(hum =>  hum.species === 'Alien')
+function InfoPage({ displayData, handleSearch }) {
 
     return (
         <Container>
@@ -14,10 +13,9 @@ function AlienPage({ filteredData, handleSearch }) {
             <br />
             <br />
             <br />
-                <PageCollection allData={ alienData }/>
+                <PageCollection allData={displayData} />
         </Container>
     )
 }
 
-export default AlienPage;
-
+export default InfoPage;

@@ -14,6 +14,8 @@ The purpose of this project, is to have a database of the most obscure character
 
 How to Use
 
+
+
 ### Requirements 
 * Functional Web Browser
 

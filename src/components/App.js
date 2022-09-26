@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import MainPage from "./MainPage";
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import NavBar from "./NavBar"
-import HumanPage from "./HumanPage";
-import AlienPage from "./AlienPage";
+import InfoPage from "./InfoPage";
 import Form from "./Form";
 import CharacterSubmission from "./Submisison";
 import { Typography } from "@material-ui/core";
@@ -13,21 +12,30 @@ function App() {
   const [ allData, setAllData ] = useState([])
   const [ filteredData, setFilteredData] = useState([])
   const [ submittedCharacter, setSubmittedCharacter ] = useState([])
+  const [humanData, setHumanData] = useState([])
+  const [alienData, setAlienData] = useState([])
+  
 
   const navigate = useNavigate();
 
     useEffect(() => {
       fetch(`http://localhost:3001/results`)
       .then(r => r.json())
-      .then(data => 
+      .then(data => {
             // console.log(data))
-          setAllData(data))
+          setAllData(data)
+
+          setHumanData(data.filter(hum =>  hum.species === 'Human'))
+          setAlienData(data.filter(hum =>  hum.species === 'Alien'))
+      })
           .catch(error => (console.log(error)));
     }, [])
 
+
   useEffect(() => {
-      setFilteredData(allData)
+    setFilteredData(allData)
   }, [allData])
+
 
   function addNewCharacter(newCharacter){
     fetch(`http://localhost:3001/results`, {
@@ -71,8 +79,8 @@ function App() {
       <br />
         <Routes>
           <Route path="/" element={<MainPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
-          <Route path="/human" element={<HumanPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
-          <Route path="/alien" element={<AlienPage filteredData={ filteredData } handleSearch={ handleSearch } />}/>
+          <Route path="/human" element={<InfoPage displayData={ humanData } handleSearch={ handleSearch } />}/>
+          <Route path="/alien" element={<InfoPage displayData={ alienData } handleSearch={ handleSearch } />}/>
           <Route path="/form" element={<Form filteredData={ filteredData } handleSearch={ handleSearch } addNewCharacter={ addNewCharacter }/>}/>
           <Route path="/submission" element={<CharacterSubmission submittedCharacter={submittedCharacter}/>}/>
         </Routes>

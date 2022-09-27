@@ -1,19 +1,19 @@
 import { Container } from "@material-ui/core";
+import Search from "./Search"
 import PageCollection from "./PageCollection";
-import Search from "./Search";
 
-function InfoPage({ displayData, handleSearch }) {
+function MainPage({ allData, handleSearch }){
 
     return (
         <Container>
             <br />
+                <Search handleSearch={handleSearch} />
             <br />
             <br />
             <br />
-            <br />
-                <PageCollection allData={displayData} />
+                <PageCollection allData={ allData }/>
         </Container>
     )
 }
 
-export default InfoPage;
+export default MainPage; 

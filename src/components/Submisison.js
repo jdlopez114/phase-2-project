@@ -16,7 +16,7 @@ function Submission({ submittedCharacter }){
             component="h2"
             align="center"
             >
-            Thank you {submittedCharacter.species}! 
+            Thank you { submittedCharacter.species }! 
             </Typography>
                 <br/>
                 <br/>
@@ -25,16 +25,16 @@ function Submission({ submittedCharacter }){
                     <Grid item xs={8} md={4} lg={2} >
                         <Card elevation={2} sx={{ maxWidth: 'md', width: 1/2 }}>
                             <CardHeader
-                                title={submittedCharacter.name}
-                                subheader={submittedCharacter.species}
+                                title={ submittedCharacter.name }
+                                subheader={ submittedCharacter.species }
                             />
                             <CardMedia
                                 style = {{ height: '100%', width: '100%', paddingTop: '100%'}}
-                                image={submittedCharacter.image}
+                                image={ submittedCharacter.image }
                             />
                             <CardContent>
                                 <Typography>
-                                    {submittedCharacter.status}
+                                    { submittedCharacter.status }
                                 </Typography>
                             </CardContent>
                         </Card>

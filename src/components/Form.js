@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 
 function Form({ addNewCharacter }) {
 
-const [formData, setFormData] = useState(
+const [ formData, setFormData ] = useState(
     {
         "name": "",
         "species": "",
@@ -34,7 +34,7 @@ function handleSubmit(e){
 
 function handleChange(e){
     setFormData({
-        ...formData, [e.target.name] : e.target.value
+        ...formData, [ e.target.name ] : e.target.value
     })
 }
 
@@ -50,52 +50,52 @@ return (
             Add to the Universe! 
         </Typography>
         <br />
-        <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        <form noValidate autoComplete="off" onSubmit={ handleSubmit }>
             <TextField 
-                onChange={handleChange}
-                className={classes.field}
+                onChange={ handleChange }
+                className={ classes.field }
                 label="Name"
                 variant="outlined"
                 fullWidth
                 required
-                value={formData.name}
+                value={ formData.name }
                 name="name"
             />
             <TextField 
-                onChange={handleChange}
-                className={classes.field}
+                onChange={ handleChange }
+                className={ classes.field }
                 label="Species"
                 variant="outlined"
                 fullWidth
                 required  
-                value={formData.species}
+                value={ formData.species }
                 name="species"
             />  
             <TextField 
-                onChange={handleChange}
-                className={classes.field}
+                onChange={ handleChange }
+                className={ classes.field }
                 label="Image URL"
                 variant="outlined"
                 fullWidth
                 required
-                value={formData.image}
+                value={ formData.image }
                 name="image"
             />
             <TextField 
-                onChange={handleChange}
-                className={classes.field}
+                onChange={ handleChange }
+                className={ classes.field }
                 label="Status"
                 variant="outlined"
                 fullWidth
                 required
-                value={formData.status}
+                value={ formData.status }
                 name="status"
             /> 
             <Button
                 type="submit"
                 color="secondary"
                 variant="contained"
-                endIcon={<KeyboardArrowRightIcon/>}
+                endIcon={ <KeyboardArrowRightIcon/> }
             >
             Submit
             </Button>       

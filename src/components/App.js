@@ -74,11 +74,11 @@ function App() {
 
       <br />
         <Routes>
-          <Route path="/" element={<MainPage allData={ filteredData } handleSearch={ handleSearch } />}/>
-          <Route path="/human" element={<InfoPage displayData={ humanData } />}/>
-          <Route path="/alien" element={<InfoPage displayData={ alienData }  />}/>
-          <Route path="/form" element={<Form allData={ allData } addNewCharacter={ addNewCharacter }/>}/>
-          <Route path="/submission" element={<CharacterSubmission submittedCharacter={submittedCharacter}/>}/>
+          <Route path="/" element={<MainPage allData={ filteredData } handleSearch={ handleSearch } />} />
+          <Route path="/human" element={<InfoPage displayData={ humanData } />} />
+          <Route path="/alien" element={<InfoPage displayData={ alienData } />} />
+          <Route path="/form" element={<Form allData={ allData } addNewCharacter={ addNewCharacter } />} />
+          <Route path="/submission" element={<CharacterSubmission submittedCharacter={ submittedCharacter } />} />
         </Routes>
     </div>
   );

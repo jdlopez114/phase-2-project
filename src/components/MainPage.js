@@ -7,7 +7,7 @@ function MainPage({ allData, handleSearch }){
     return (
         <Container>
             <br />
-                <Search handleSearch={handleSearch} />
+                <Search handleSearch={ handleSearch } />
             <br />
             <br />
             <br />

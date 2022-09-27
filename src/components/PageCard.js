@@ -9,17 +9,17 @@ function PageCard({ data }) {
     return (
         <Card elevation={2} sx={{ maxWidth: 345 }}>
             <CardHeader
-                title={data.name}
-                subheader={data.species}
+                title={ data.name }
+                subheader={ data.species }
             />
             <CardMedia
                 style = {{ height: '100%', width: '100%', paddingTop: '100%'}}
-                image={data.image}
+                image={ data.image }
                 component='div'
             />
             <CardContent>
                 <Typography>
-                    {data.status}
+                    { data.status }
                 </Typography>
             </CardContent>
         </Card>

@@ -1574,6 +1574,20 @@
       ],
       "url": "https://rickandmortyapi.com/api/character/60",
       "created": "2017-11-05T11:52:45.852Z"
+    },
+    {
+      "name": "TEST",
+      "species": "",
+      "image": "",
+      "status": "ALIVE",
+      "id": 61
+    },
+    {
+      "name": "TEST 2",
+      "species": "",
+      "image": "",
+      "status": "ALIEN",
+      "id": 62
     }
   ]
 }

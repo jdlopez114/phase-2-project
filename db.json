@@ -1579,15 +1579,29 @@
       "name": "TEST",
       "species": "",
       "image": "",
-      "status": "ALIVE",
+      "status": "TEST",
       "id": 61
     },
     {
-      "name": "TEST 2",
+      "name": "TEST",
       "species": "",
       "image": "",
-      "status": "ALIEN",
+      "status": "TEST",
       "id": 62
+    },
+    {
+      "name": "TEST 3",
+      "species": "",
+      "image": "TEST 3",
+      "status": "TEST 3",
+      "id": 63
+    },
+    {
+      "name": "TEST",
+      "species": "",
+      "image": "",
+      "status": "TEST",
+      "id": 64
     }
   ]
 }

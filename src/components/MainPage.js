@@ -2,7 +2,7 @@ import { Container } from "@material-ui/core";
 import Search from "./Search"
 import PageCollection from "./PageCollection";
 
-function MainPage({ allData, handleSearch }){
+function MainPage({ displayData, handleSearch }){
 
     return (
         <Container>
@@ -11,7 +11,7 @@ function MainPage({ allData, handleSearch }){
             <br />
             <br />
             <br />
-                <PageCollection allData={ allData }/>
+                <PageCollection displayData={ displayData }/>
         </Container>
     )
 }

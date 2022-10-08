@@ -4,22 +4,24 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import { Typography, CardMedia } from "@material-ui/core";
 
-function PageCard({ data }) {
- 
+function PageCard({ displayData }) {
+
+    const {name, species, image, status} = displayData;
+
     return (
         <Card elevation={2} sx={{ maxWidth: 345 }}>
             <CardHeader
-                title={ data.name }
-                subheader={ data.species }
+                title={ name }
+                subheader={ species }
             />
             <CardMedia
                 style = {{ height: '100%', width: '100%', paddingTop: '100%'}}
-                image={ data.image }
+                image={ image }
                 component='div'
             />
             <CardContent>
                 <Typography>
-                    { data.status }
+                    { status }
                 </Typography>
             </CardContent>
         </Card>

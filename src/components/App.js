@@ -4,14 +4,12 @@ import NavBar from "./NavBar"
 import InfoPage from "./InfoPage";
 import Form from "./Form";
 import MainPage from "./MainPage";
-import CharacterSubmission from "./Submisison";
 import { Typography } from "@material-ui/core";
 
 function App() {
 
   const [ allData, setAllData ] = useState([])
   const [ filteredData, setFilteredData ] = useState([])
-  const [ submittedCharacter, setSubmittedCharacter ] = useState([])
   const [ humanData, setHumanData ] = useState([])
   const [ alienData, setAlienData ] = useState([])
   
@@ -24,9 +22,8 @@ function App() {
         setAllData(data)
         setHumanData(data.filter(hum =>  hum.species === 'Human'))
         setAlienData(data.filter(hum =>  hum.species === 'Alien'))
-          
       })
-          .catch(error => (console.log(error)));
+        .catch(error => (console.log(error)));
     }, [])
 
   function addNewCharacter(newCharacter){
@@ -39,9 +36,8 @@ function App() {
     })
         .then(r => r.json())
         .then(data => 
-          navigate(`/Submission`))
+          navigate(`/`))
           .catch(error => (console.log(error)));
-    setSubmittedCharacter(newCharacter)
     setAllData([...allData, newCharacter])
   }
 
@@ -71,14 +67,12 @@ function App() {
         <br />
         <NavBar />
         <br />
-
       <br />
         <Routes>
-          <Route path="/" element={<MainPage allData={ filteredData } handleSearch={ handleSearch } />} />
+          <Route exact path="/" element={<MainPage displayData={ filteredData } handleSearch={ handleSearch } />} />
           <Route path="/human" element={<InfoPage displayData={ humanData } />} />
           <Route path="/alien" element={<InfoPage displayData={ alienData } />} />
-          <Route path="/form" element={<Form allData={ allData } addNewCharacter={ addNewCharacter } />} />
-          <Route path="/submission" element={<CharacterSubmission submittedCharacter={ submittedCharacter } />} />
+          <Route path="/new" element={<Form addNewCharacter={ addNewCharacter } />} />
         </Routes>
     </div>
   );

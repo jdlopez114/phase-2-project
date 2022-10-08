@@ -19,7 +19,7 @@ function NavBar() {
         <NavLink exact="true" to="/" style={({ isActive }) => isActive ? selected: notSelected }> Home Page </NavLink>
         <NavLink exact="true" to="/human" style={({ isActive }) => isActive ? selected : notSelected}> Human </NavLink>
         <NavLink exact="true" to="/alien" style={({ isActive }) => isActive ? selected : notSelected}> Alien </NavLink>
-        <NavLink exact="true" to="/form" style={({ isActive }) => isActive ? selected : notSelected}> Custom </NavLink>
+        <NavLink exact="true" to="/new" style={({ isActive }) => isActive ? selected : notSelected}> Custom </NavLink>
       </div>
   
     return <div>{NavBar}</div>;
